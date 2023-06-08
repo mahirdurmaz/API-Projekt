@@ -160,12 +160,6 @@ h2 {
   text-transform: capitalize;
 }
 
-h2:hover {
-  -webkit-line-clamp: 4;
-  overflow: visible;
-  transition: 0.5s ease;
-}
-
 .beschreibung {
   color: #a7a7a7;
   font-size: 0.8rem;
@@ -174,11 +168,6 @@ h2:hover {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-
-.beschreibung:hover {
-  -webkit-line-clamp: 8;
-  overflow: visible;
 }
 
 .produkt-info {
@@ -195,6 +184,10 @@ h2:hover {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   text-align: center;
+}
+
+.produkt-info:hover {
+  margin-bottom: 20px;
 }
 
 .eigenschaften {
