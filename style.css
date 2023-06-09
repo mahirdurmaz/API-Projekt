@@ -28,18 +28,17 @@ body {
 }
 
 .pop-up {
-  max-height: 80vh;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  border-radius: 60px;
   display: flex;
-  justify-content: space-between;
-  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .pop-up-title {
@@ -48,45 +47,89 @@ body {
 
 .pop-up-info {
   margin-left: 40px;
+  border-radius: 0 60px 60px 0;
+  height: 400px;
+  width: 600px;
+  align-self: center;
+  padding: 2.4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  background-color: white;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .pop-up-bilder {
-  border-radius: 50px;
-  object-fit: fill;
+  border-radius: 60px 0 0 60px;
+  object-fit: contain;
+  height: 500px;
+  width: auto;
+  background-color: white;
+  border: 20px solid white;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .pop-up-bsc {
-  margin: 20px 0 20px 0;
+  margin: 20px 0 50px 0;
+  color: #3a3a3a;
+}
+
+.infos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-content: flex-start;
+  text-transform: capitalize;
+}
+
+.pop-up-star {
+  margin-left: -1px;
+}
+
+.lager {
+  margin-left: 2px;
+}
+
+.firma {
+  margin-left: 2px;
+}
+
+.info-text {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
 }
 
 span {
   color: #464646;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 button {
   cursor: pointer;
   margin-top: 20px;
   width: 190px;
-  border: 3px solid rgb(237, 123, 57);
+  border: 3px solid rgb(0, 0, 0);
   /* background-color: rgb(237, 123, 57); */
   height: 50px;
   border-radius: 20px;
   background-color: white;
-  color: rgb(237, 123, 57);
+  color: rgb(0, 0, 0);
   font-weight: 600;
   align-self: center;
   transition: all 0.1s linear !important;
+  position: relative;
+  background: -webkit-linear-gradient(transparent 50%, black 50%);
+  background-size: 100px 150px;
 }
 
 button:hover {
   width: 210px;
-  font-size: 0.9rem;
   color: white;
-  background-color: rgb(237, 123, 57);
+  background-position: 0 -90px;
 }
 
 header {
@@ -206,4 +249,68 @@ i {
 
 i:hover {
   font-size: 1.2rem;
+}
+
+@media screen and (min-width: 2400px) {
+  .container {
+    padding-right: 7.4rem;
+    padding-left: 7.4rem;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .container {
+    padding: 40px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .produkt-info:hover {
+    margin-bottom: 50px;
+  }
+  .produkt-info:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .pop-up {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pop-up-bilder {
+    border-radius: 60px 60px 0 0;
+    max-height: 600px;
+    width: 70vw;
+  }
+
+  .pop-up-info {
+    border-radius: 0 0 60px 60px;
+    margin-top: 30px;
+    width: 860px;
+    margin-left: 0;
+    width: 70vw;
+  }
+
+  button {
+    min-height: 50px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .pop-up-bilder {
+    width: 90vw;
+  }
+  .pop-up-info {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .pop-up-bilder {
+    width: 95vw;
+  }
+  .pop-up-info {
+    width: 95vw;
+  }
 }
